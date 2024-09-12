@@ -26,13 +26,11 @@ pipeline{
 
         }
     }
-    post{
-        always{
-            echo "affichage du rapport"
+    post {
+        always {
             node {
                 junit "target/surefire-reports/**/*.xml"
             }
         }
-        
     }
 }
